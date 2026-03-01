@@ -31,8 +31,9 @@ body {
 }
 
 .navbar {
-    background-color: var(--primary-color) !important;
-    padding: 0.8rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar-brand {
@@ -234,7 +235,7 @@ body {
     text-align: center;
     margin-bottom: 1rem;
     overflow: hidden;
-    height: 200px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -663,8 +664,15 @@ footer a:hover {
 }
 
 /* ===== Checkout Page ===== */
-.checkout-steps {
+/* .checkout-steps {
     margin-bottom: 2rem;
+} */
+
+.checkout-steps {
+    background: #fff;
+    padding: 60px 0;
+    position: relative;
+    z-index: 1;
 }
 
 .step {

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ShopEase</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header (same as index.html) -->
+    <header>
+        <!-- Top Bar -->
+        <div class="top-bar bg-dark text-white py-2">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <span><i class="fas fa-map-marker-alt me-2"></i>Deliver to New York 10001</span>
+                    </div>
+                    <div class="col-md-6 text-end d-none d-md-block">
+                        <span class="me-3"><i class="fas fa-tag me-1"></i>Today's Deals</span>
+                        <span class="me-3"><i class="fas fa-gift me-1"></i>Gift Cards</span>
+                        <span><i class="fas fa-headset me-1"></i>Customer Service</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="fas fa-shopping-bag me-2" style="color: #ff9900;"></i>
+                    <span style="color: #ff9900;">Shop</span>Ease
+                </a>
+                
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Content -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <!-- Search Bar with Category Dropdown -->
+                    <form class="d-flex mx-auto my-3 my-lg-0" style="width: 50%;" id="searchForm">
+                        <div class="input-group">
+                            <select class="form-select" style="max-width: 120px;" id="searchCategory">
+                                <option>All</option>
+                                <option>Electronics</option>
+                                <option>Fashion</option>
+                                <option>Beauty</option>
+                                <option>Home & Kitchen</option>
+                                <option>Books</option>
+                                <option>Sports</option>
+                            </select>
+                            <input type="text" class="form-control" placeholder="Search products...">
+                            <button class="btn btn-warning" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Right Navigation -->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-user me-1"></i>Account
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="login.html">Login</a></li>
+                                <li><a class="dropdown-item" href="register.html">Register</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">My Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Orders</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-clipboard-list me-1"></i>Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link position-relative" href="cart.html">
+                                <i class="fas fa-shopping-cart me-1"></i>Cart
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark cart-badge">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- About Header -->
+    <section class="about-header">
+        <div class="container">
+            <h1>About ShopEase</h1>
+            <p>Your trusted online shopping destination since 2024</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2>Our Story</h2>
+                    <p class="lead">Founded with a vision to make online shopping accessible to everyone</p>
+                    <p>ShopEase started as a small dream to revolutionize the way people shop online. Today, we've grown into a comprehensive marketplace offering millions of products across various categories, serving customers worldwide with the same passion and dedication that started it all.</p>
+                    <p>Our commitment to quality, competitive pricing, and exceptional customer service has made us a trusted name in e-commerce. We believe in creating a seamless shopping experience that brings joy to our customers every day.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://via.placeholder.com/600x400/ff9900/ffffff?text=Our+Story" class="img-fluid rounded" alt="Our Story">
+                </div>
+            </div>
+
+            <!-- Mission & Values -->
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="text-center p-4 bg-light rounded">
+                        <i class="fas fa-bullseye fa-3x mb-3" style="color: #ff9900;"></i>
+                        <h5>Our Mission</h5>
+                        <p class="mb-0">To provide the best online shopping experience with quality products and exceptional service</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center p-4 bg-light rounded">
+                        <i class="fas fa-eye fa-3x mb-3" style="color: #ff9900;"></i>
+                        <h5>Our Vision</h5>
+                        <p class="mb-0">To become the world's most customer-centric online marketplace</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center p-4 bg-light rounded">
+                        <i class="fas fa-heart fa-3x mb-3" style="color: #ff9900;"></i>
+                        <h5>Our Values</h5>
+                        <p class="mb-0">Integrity, Innovation, and Customer First approach in everything we do</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Section -->
+            <h2 class="text-center mb-4">Meet Our Leadership Team</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/150/232f3e/ffffff?text=CEO" alt="Team Member">
+                        <h5>John Smith</h5>
+                        <p class="text-muted">CEO & Founder</p>
+                        <div class="social-links">
+                            <a href="#" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/150/ff9900/ffffff?text=CTO" alt="Team Member">
+                        <h5>Sarah Johnson</h5>
+                        <p class="text-muted">CTO</p>
+                        <div class="social-links">
+                            <a href="#" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/150/146eb4/ffffff?text=CMO" alt="Team Member">
+                        <h5>Michael Chen</h5>
+                        <p class="text-muted">CMO</p>
+                        <div class="social-links">
+                            <a href="#" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-md-3">
+                    <h2 class="display-4 fw-bold" style="color: #ff9900;">1M+</h2>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="col-md-3">
+                    <h2 class="display-4 fw-bold" style="color: #ff9900;">50K+</h2>
+                    <p>Products</p>
+                </div>
+                <div class="col-md-3">
+                    <h2 class="display-4 fw-bold" style="color: #ff9900;">100+</h2>
+                    <p>Categories</p>
+                </div>
+                <div class="col-md-3">
+                    <h2 class="display-4 fw-bold" style="color: #ff9900;">24/7</h2>
+                    <p>Customer Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <h5 class="mb-3">Get to Know Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white-50 text-decoration-none">About Us</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Careers</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Press Releases</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Investor Relations</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">Make Money with Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Sell on ShopEase</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Become an Affiliate</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Advertise Your Products</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Self-Publish with Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">Customer Service</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="contact.html" class="text-white-50 text-decoration-none">Contact Us</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Returns Center</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Track Orders</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Shipping Info</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">Connect With Us</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-youtube fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="text-center text-white-50">
+                <p class="mb-0">&copy; 2024 ShopEase. All rights reserved. Developed with <i class="fas fa-heart text-danger"></i> for online shopping</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -15,7 +15,7 @@ $(document).ready(function() {
             originalPrice: 799.99,
             rating: 4.5,
             reviews: 234,
-            image: "https://via.placeholder.com/300x300/232f3e/ffffff?text=Smart+TV",
+            image: "images/p-1 tv.jpg",
             badge: "Deal",
             stock: 15
         },
@@ -27,7 +27,7 @@ $(document).ready(function() {
             originalPrice: 129.99,
             rating: 4.3,
             reviews: 567,
-            image: "https://via.placeholder.com/300x300/ff9900/ffffff?text=Nike+Shoes",
+            image: "images/p-2 shoes.webp",
             badge: "New",
             stock: 25
         },
@@ -51,7 +51,7 @@ $(document).ready(function() {
             originalPrice: 1299.99,
             rating: 5,
             reviews: 456,
-            image: "https://via.placeholder.com/300x300/232f3e/ffffff?text=iPhone",
+            image: "images/p-4 iphone2.webp",
             badge: "New",
             stock: 10
         },
@@ -75,7 +75,7 @@ $(document).ready(function() {
             originalPrice: 149.99,
             rating: 4.4,
             reviews: 67,
-            image: "https://via.placeholder.com/300x300/146eb4/ffffff?text=Coffee+Maker",
+            image: "images/p-6 coffee.webp",
             badge: "Deal",
             stock: 20
         },
@@ -87,7 +87,7 @@ $(document).ready(function() {
             originalPrice: 19.99,
             rating: 4.6,
             reviews: 345,
-            image: "https://via.placeholder.com/300x300/232f3e/ffffff?text=Book",
+            image: "images/p-7 book.webp",
             badge: "Bestseller",
             stock: 50
         },
@@ -99,7 +99,7 @@ $(document).ready(function() {
             originalPrice: 49.99,
             rating: 4.5,
             reviews: 178,
-            image: "https://via.placeholder.com/300x300/ff9900/ffffff?text=Yoga+Mat",
+            image: "images/p-8 yogamate.jpg",
             badge: "Hot",
             stock: 30
         }

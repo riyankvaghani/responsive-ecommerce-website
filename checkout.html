@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - ShopEase</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header (simplified for checkout) -->
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="fas fa-shopping-bag me-2" style="color: #ff9900;"></i>
+                    <span style="color: #ff9900;">Shop</span>Ease
+                </a>
+                <div class="text-white">
+                    <span class="me-3"><i class="fas fa-lock me-1"></i>Secure Checkout</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section py-5">
+        <div class="container">
+            <!-- Checkout Steps -->
+            <div class="checkout-steps row mb-4">
+                <div class="col-4 step active">
+                    <div class="step-number">1</div>
+                    <span>Shipping</span>
+                </div>
+                <div class="col-4 step">
+                    <div class="step-number">2</div>
+                    <span>Payment</span>
+                </div>
+                <div class="col-4 step">
+                    <div class="step-number">3</div>
+                    <span>Review</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Billing Form -->
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <div class="billing-form">
+                        <h5 class="mb-4">Shipping Address</h5>
+                        
+                        <form id="checkoutForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="address" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="address" placeholder="Street address" required>
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" id="address2" placeholder="Apartment, suite, etc. (optional)">
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="city" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="city" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="state" class="form-label">State</label>
+                                    <select class="form-select" id="state" required>
+                                        <option value="">Choose...</option>
+                                        <option>New York</option>
+                                        <option>California</option>
+                                        <option>Texas</option>
+                                        <option>Florida</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="zip" class="form-label">ZIP Code</label>
+                                    <input type="text" class="form-control" id="zip" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" required>
+                                </div>
+                            </div>
+
+                            <hr class="my-4">
+
+                            <h5 class="mb-4">Payment Method</h5>
+                            
+                            <div class="payment-methods">
+                                <div class="payment-method selected">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
+                                        <label class="form-check-label" for="creditCard">
+                                            <i class="fab fa-cc-visa me-2"></i>
+                                            <i class="fab fa-cc-mastercard me-2"></i>
+                                            Credit / Debit Card
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="payment-method">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="paypal">
+                                        <label class="form-check-label" for="paypal">
+                                            <i class="fab fa-paypal me-2"></i>
+                                            PayPal
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="payment-method">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="cash">
+                                        <label class="form-check-label" for="cash">
+                                            <i class="fas fa-money-bill me-2"></i>
+                                            Cash on Delivery
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Credit Card Details (shown when credit card is selected) -->
+                            <div id="cardDetails" class="mt-4">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <label for="cardNumber" class="form-label">Card Number</label>
+                                        <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="expiry" class="form-label">Expiry Date</label>
+                                        <input type="text" class="form-control" id="expiry" placeholder="MM/YY">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="cvv" class="form-label">CVV</label>
+                                        <input type="text" class="form-control" id="cvv" placeholder="123">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="my-4">
+
+                            <button class="btn btn-warning w-100 py-3 fw-bold" type="submit">
+                                Place Order
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="col-lg-4">
+                    <div class="order-summary">
+                        <h5 class="mb-4">Your Order</h5>
+                        
+                        <!-- Order Items -->
+                        <div class="order-items mb-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <div>
+                                    <h6 class="mb-1">Samsung 4K Smart TV</h6>
+                                    <small class="text-muted">Qty: 1</small>
+                                </div>
+                                <span>$599.99</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <div>
+                                    <h6 class="mb-1">Nike Air Max Shoes</h6>
+                                    <small class="text-muted">Qty: 1</small>
+                                </div>
+                                <span>$89.99</span>
+                            </div>
+                        </div>
+                        
+                        <hr>
+                        
+                        <!-- Summary Calculations -->
+                        <div class="summary-item">
+                            <span>Subtotal</span>
+                            <span>$689.98</span>
+                        </div>
+                        
+                        <div class="summary-item">
+                            <span>Shipping</span>
+                            <span>$5.99</span>
+                        </div>
+                        
+                        <div class="summary-item">
+                            <span>Tax</span>
+                            <span>$55.20</span>
+                        </div>
+                        
+                        <hr>
+                        
+                        <div class="summary-item summary-total">
+                            <span>Total</span>
+                            <span class="fw-bold">$751.17</span>
+                        </div>
+                        
+                        <!-- Secure Payment Notice -->
+                        <div class="text-center mt-4">
+                            <p class="text-muted small">
+                                <i class="fas fa-lock me-1"></i>
+                                Your payment information is secure
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        // Show/hide card details based on payment method
+        $(document).ready(function() {
+            $('input[name="paymentMethod"]').change(function() {
+                if ($(this).val() === 'creditCard') {
+                    $('#cardDetails').show();
+                } else {
+                    $('#cardDetails').hide();
+                }
+            });
+            
+            // Format credit card number
+            $('#cardNumber').on('input', function() {
+                let value = $(this).val().replace(/\s/g, '').replace(/(\d{4})/g, '$1 ').trim();
+                $(this).val(value);
+            });
+            
+            // Format expiry date
+            $('#expiry').on('input', function() {
+                let value = $(this).val().replace(/\s/g, '').replace(/(\d{2})(\d{2})/, '$1/$2').trim();
+                $(this).val(value);
+            });
+        });
+    </script>
+</body>
+</html>
